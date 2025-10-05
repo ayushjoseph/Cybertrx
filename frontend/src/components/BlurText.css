@@ -28,8 +28,8 @@
 .blur-text.main-title {
   font-family: "Smooch Sans", sans-serif;
   font-size: 100px;
-  font-weight: 600;
-  color: #0096c7; /* Deep blue color */
+  font-weight: 700; /* Bold for title */
+  color: #f2cc8f; /* Warm muted yellow color */
   animation: blurIn 1s ease-out forwards;
   letter-spacing: 2px;
 }
@@ -38,8 +38,8 @@
 .blur-text.subtitle {
   font-family: "Smooch Sans", sans-serif;
   font-size: 61px;
-  font-weight: 500;
-  color: #1e40af; /* Darker blue for subtitle */
+  font-weight: 400; /* Regular for tagline */
+  color: #f2cc8f; /* Warm muted yellow color */
   opacity: 1;
   animation: blurIn 1.2s ease-out forwards;
 }

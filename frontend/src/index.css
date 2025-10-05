@@ -28,7 +28,11 @@ code {
 }
 
 .header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: hsla(239, 94%, 14%, 1);
+  background: linear-gradient(90deg, hsla(239, 94%, 14%, 1) 0%, hsla(190, 68%, 50%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(239, 94%, 14%, 1) 0%, hsla(190, 68%, 50%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(239, 94%, 14%, 1) 0%, hsla(190, 68%, 50%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#020344", endColorstr="#28B8D5", GradientType=1 );
   color: white;
   padding: 2rem 0;
   text-align: center;
@@ -41,17 +45,17 @@ code {
   margin: 0;
   font-family: "Smooch Sans", sans-serif;
   font-size: 100px;
-  font-weight: 600;
+  font-weight: 700; /* Bold for title */
   text-align: center;
   margin-bottom: 1rem;
-  color: #0096c7; /* Deep blue color */
+  color: #f2cc8f; /* Warm muted yellow color */
 }
 
 .header p {
   margin: 0.5rem 0 0 0;
   font-family: "Smooch Sans", sans-serif;
   font-size: 58px;
-  font-weight: 600;
+  font-weight: 400; /* Regular for paragraph text */
   opacity: 1;
 }
 
@@ -61,8 +65,8 @@ code {
   font-size: 61px;
   opacity: 1;
   font-style: normal;
-  color: #1e40af; /* Dark blue for visibility */
-  font-weight: 500;
+  color: #f2cc8f; /* Warm muted yellow color */
+  font-weight: 400; /* Regular for instruction text */
 }
 
 .analysis-form {
