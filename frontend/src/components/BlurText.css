@@ -1,0 +1,45 @@
+.blur-text {
+  display: inline-block;
+  filter: blur(0.5em);
+  transition: filter 0.3s;
+  animation: blurIn 0.6s ease-out forwards;
+}
+
+.blur-text:hover {
+  filter: blur(0);
+}
+
+@keyframes blurIn {
+  0% {
+    filter: blur(1em);
+    opacity: 0;
+  }
+  50% {
+    filter: blur(0.5em);
+    opacity: 0.8;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+/* Special styling for the main title */
+.blur-text.main-title {
+  font-family: "Smooch Sans", sans-serif;
+  font-size: 100px;
+  font-weight: 600;
+  color: #0096c7; /* Deep blue color */
+  animation: blurIn 1s ease-out forwards;
+  letter-spacing: 2px;
+}
+
+/* Subtitle styling */
+.blur-text.subtitle {
+  font-family: "Smooch Sans", sans-serif;
+  font-size: 61px;
+  font-weight: 500;
+  color: #1e40af; /* Darker blue for subtitle */
+  opacity: 1;
+  animation: blurIn 1.2s ease-out forwards;
+}

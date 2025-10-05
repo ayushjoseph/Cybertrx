@@ -3,6 +3,8 @@ import { MapContainer, TileLayer, Marker, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
 import axios from 'axios';
 import { format } from 'date-fns';
+import BlurText from './components/BlurText';
+import MagicBento from './components/MagicBento';
 import './index.css';
 
 // Fix for default markers in react-leaflet
@@ -92,8 +94,15 @@ function App() {
   return (
     <div className="container">
       <header className="header">
-        <h1>🌍 Skyluxe</h1>
-        <p>Climate Analysis Platform - Click on the map to select a location</p>
+        <h1>
+          <BlurText className="main-title">🌍 Skyluxe</BlurText>
+        </h1>
+        <p>
+          <BlurText className="subtitle" delay={300}>Climate Analysis Platform</BlurText>
+        </p>
+        <p className="subtitle-description">
+          Click on the map to select a location
+        </p>
       </header>
 
       <div className="analysis-form">
@@ -128,36 +137,43 @@ function App() {
             <div className="date-inputs">
               <div>
                 <label htmlFor="startDate">Start Date:</label>
-                <input
-                  type="date"
-                  id="startDate"
-                  value={startDate}
-                  onChange={(e) => setStartDate(e.target.value)}
-                  max={endDate}
-                />
+                <MagicBento className="magic-bento-input">
+                  <input
+                    type="date"
+                    id="startDate"
+                    value={startDate}
+                    onChange={(e) => setStartDate(e.target.value)}
+                    max={endDate}
+                    style={{ background: 'transparent', border: 'none', color: 'black', outline: 'none' }}
+                  />
+                </MagicBento>
               </div>
               <div>
                 <label htmlFor="endDate">End Date:</label>
-                <input
-                  type="date"
-                  id="endDate"
-                  value={endDate}
-                  onChange={(e) => setEndDate(e.target.value)}
-                  min={startDate}
-                />
+                <MagicBento className="magic-bento-input">
+                  <input
+                    type="date"
+                    id="endDate"
+                    value={endDate}
+                    onChange={(e) => setEndDate(e.target.value)}
+                    min={startDate}
+                    style={{ background: 'transparent', border: 'none', color: 'black', outline: 'none' }}
+                  />
+                </MagicBento>
               </div>
             </div>
           </div>
 
           {error && <div className="error">{error}</div>}
 
-          <button
-            type="submit"
-            className="submit-button"
+          <MagicBento
+            variant="primary"
+            className="magic-bento-button"
+            onClick={handleSubmit}
             disabled={isLoading || !selectedLocation}
           >
             {isLoading ? 'Analyzing Climate Data...' : 'Analyze Climate'}
-          </button>
+          </MagicBento>
         </form>
       </div>
 
