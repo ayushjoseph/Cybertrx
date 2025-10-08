@@ -1,4 +1,4 @@
-# Skyluxe - Climate Analysis Platform
+#   First variant of Skyluxe and a Failed project of mine, the succesdful one is there in another repository
 
 A SOLID-compliant climate analysis platform built with FastAPI and React, following clean architecture principles.
 
